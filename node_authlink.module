@@ -121,7 +121,8 @@ function node_authlink_batch_delete(&$form, &$form_state) {
 function node_authlink_menu_local_tasks_alter(&$data, $router_item, $root_path) {
 	global $user;
   $arg = arg(1);
-  if ($arg && $user->uid == 1 && strstr($root_path, 'node')) {
+  if ($arg && in_array('administrator', $user->roles) && strstr($root_path, 'node')) {
+		menu_cache_clear_all();
     if($authkey = node_authlink_load_authkey($arg)) {
 			foreach ($data['tabs'][0]['output'] as $key => $item) {
 			  // Add destination query string to link to preserve it.
