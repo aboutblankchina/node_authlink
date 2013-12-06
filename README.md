@@ -10,4 +10,4 @@ node_authlink
 
 新增功能：
 给Node的url增加query,如
-http://localhost/node/3?authkey=d9d65ab5
+http://localhost/node/3?authkey=d9d65ab58d507f3fa3451a7c6075013bd1901492a6d262dc5805ef5e9ea99c95，当然这个authkey只有管理员可以看到.
